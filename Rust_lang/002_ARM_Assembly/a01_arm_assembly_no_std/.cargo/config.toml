@@ -1,18 +1,28 @@
-[target.'aarch64-apple-darwin']
+[build]
+target = "aarch64-apple-darwin"
+
+[target.aarch64-apple-darwin]
 rustflags = [
-    "-C", "link-arg=-Wl,-e,_start",
+    "-C", "link-args=-nostdlib -Wl,-no_entry",
+    "-C", "panic=abort",
+    "-C", "opt-level=z",
+]
+
+# [target.'aarch64-apple-darwin']
+# rustflags = [
+#     "-C", "link-arg=-Wl,-e,__start",
+#     "-C", "link-arg=-Wl,-undefined,dynamic_lookup"
+# ]
+
+# For bare-metal ARM targets
+[target.'aarch64-unknown-none']
+rustflags = [
+    "-C", "link-arg=-Tlinker.ld",
     "-C", "panic=abort"
 ]
 
 [target.'x86_64-unknown-linux-gnu']
 rustflags = [
     "-C", "link-arg=-nostartfiles",
-    "-C", "panic=abort"
-]
-
-# For bare-metal ARM targets
-[target.'aarch64-unknown-none']
-rustflags = [
-    "-C", "link-arg=-Tlinker.ld",
     "-C", "panic=abort"
 ]

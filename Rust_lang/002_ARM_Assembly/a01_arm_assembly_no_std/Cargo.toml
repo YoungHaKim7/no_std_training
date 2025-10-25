@@ -5,9 +5,6 @@ edition = "2024"
 
 [dependencies]
 
-# Optional: add panic runtime for better error handling
-panic-halt = "0.2"
-
 [profile.dev]
 panic = "abort"
 lto = true
