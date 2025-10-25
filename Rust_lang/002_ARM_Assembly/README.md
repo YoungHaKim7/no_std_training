@@ -1,3 +1,7 @@
+# 유튜브 영상
+- [(영상모아보기)QEMU arm VM Raspberry Pi | ashish sharma](https://youtube.com/playlist?list=PLcrFuYQKIx-qBnRL_DRVXglSQupJWiegG&si=ZCuFpmCAPtYZlnmb)
+
+
 # `rustc`
 
 
