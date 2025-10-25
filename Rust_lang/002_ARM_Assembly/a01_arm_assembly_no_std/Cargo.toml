@@ -1,0 +1,21 @@
+[package]
+name = "a01_arm_assembly_no_std"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+# Optional: add panic runtime for better error handling
+panic-halt = "0.2"
+
+[profile.dev]
+panic = "abort"
+lto = true
+
+[profile.release]
+panic = "abort"
+lto = true
+
+[[bin]]
+name = "a01_arm_assembly_no_std"
+path = "src/main.rs"
