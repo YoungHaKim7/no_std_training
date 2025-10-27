@@ -8,6 +8,7 @@
 # Getting Started with Rust on a Raspberry Pi Pico (Part 1)
 - https://reltech.substack.com/p/getting-started-with-rust-on-a-raspberry
   - https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf
+- https://github.com/raspberrypi/pico-sdk
 
 ```
 $ git clone https://github.com/raspberrypi/debugprobe.git
